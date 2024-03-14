@@ -5,19 +5,22 @@ namespace FizzBuzzAPIDemo
 {
     public interface IFizzBuzzProcessor
     {
-        public IEnumerable<FizzBuzzResponse> ProcessData(int?[] values);
+        public IEnumerable<FizzBuzzResponse> ProcessData(string[] values);
     }
 
     public class FizzBuzzProcessor : IFizzBuzzProcessor
     {
-        public IEnumerable<FizzBuzzResponse> ProcessData(int?[] values)
+        public IEnumerable<FizzBuzzResponse> ProcessData(string[] values)
         {
             List<FizzBuzzResponse> fizzBuzzResponses = new List<FizzBuzzResponse>();
-            foreach (int? i in values)
+            foreach (string item in values)
             {
+                int i;
+                bool isNumeric = int.TryParse(item, out i);
+
                 FizzBuzzResponse fizzBuzzResponse = new FizzBuzzResponse();
 
-                if (i.HasValue)
+                if (isNumeric)
                 {
                     if (i % 3 == 0 && i % 5 == 0)
                     {
@@ -49,7 +52,7 @@ namespace FizzBuzzAPIDemo
                 }
                 else
                 {
-                    fizzBuzzResponse.InputData = Convert.ToString(i);
+                    fizzBuzzResponse.InputData = Convert.ToString(item);
                     fizzBuzzResponse.OutPutData = "Invalid Item";
                 }
 

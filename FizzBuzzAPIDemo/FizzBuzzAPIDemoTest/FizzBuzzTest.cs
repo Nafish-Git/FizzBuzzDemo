@@ -8,7 +8,7 @@ namespace FizzBuzzAPIDemoTest
 {
     public class FizzBuzzTest
     {
-        IFizzBuzzProcessor _iFizzBuzzProcessor;
+        private readonly IFizzBuzzProcessor _iFizzBuzzProcessor;
         public FizzBuzzTest()
         {
             _iFizzBuzzProcessor = new FizzBuzzProcessor();
@@ -16,7 +16,7 @@ namespace FizzBuzzAPIDemoTest
         [Fact]
         public void TestToVerifyNumberDividedBy3()
         {
-            int?[] numarr = { 3, 6, 9 };
+            string[] numarr = { "3", "6", "9" };
             var fizzBuzzResponses = _iFizzBuzzProcessor.ProcessData(numarr);
 
             var OutPutData = fizzBuzzResponses
@@ -30,7 +30,7 @@ namespace FizzBuzzAPIDemoTest
         [Fact]
         public void TestToVerifyNumberDividedBy5()
         {
-            int?[] numarr = { 5, 10, 25 };
+            string[] numarr = { "5", "10", "25" };
             var fizzBuzzResponses = _iFizzBuzzProcessor.ProcessData(numarr);
 
             var OutPutData = fizzBuzzResponses
@@ -44,7 +44,7 @@ namespace FizzBuzzAPIDemoTest
         [Fact]
         public void TestToVerifyNumberDividedBy_3_And_5()
         {
-            int?[] numarr = { 15, 30, 45 };
+            string[] numarr = {"15" , "30", "45" };
             var fizzBuzzResponses = _iFizzBuzzProcessor.ProcessData(numarr);
 
             var OutPutData = fizzBuzzResponses
@@ -58,7 +58,7 @@ namespace FizzBuzzAPIDemoTest
         [Fact]
         public void TestToVerifyArrayHavingNullValue()
         {
-            int?[] numarr = { 5, null, 25 };
+            string[] numarr = { "5", null, "25" };
             var fizzBuzzResponses = _iFizzBuzzProcessor.ProcessData(numarr);
 
             var OutPutData = fizzBuzzResponses
@@ -72,7 +72,7 @@ namespace FizzBuzzAPIDemoTest
         [Fact]
         public void TestToVerifyArrayHavingMixValue()
         {
-            int?[] numarr = { 3, null, 5,15,1 };
+            string[] numarr = { "3", null, "5", "15", "1" };
             var fizzBuzzResponses = _iFizzBuzzProcessor.ProcessData(numarr);
 
             var OutPutData3 = fizzBuzzResponses

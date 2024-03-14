@@ -10,14 +10,14 @@ namespace FizzBuzzAPIDemo.Controllers
     [ApiController]
     public class FizzBuzzController : ControllerBase
     {
-        IFizzBuzzProcessor _iFizzBuzzProcessor;
+        private readonly IFizzBuzzProcessor _iFizzBuzzProcessor;
         public FizzBuzzController(IFizzBuzzProcessor iFizzBuzzProcessor)
         {
             _iFizzBuzzProcessor = iFizzBuzzProcessor;
         }
 
         [HttpPost]
-        public IEnumerable<FizzBuzzResponse> Process(int?[] values)
+        public IEnumerable<FizzBuzzResponse> Process(string[] values)
         {
             try
             {
