@@ -43,11 +43,7 @@ namespace FizzBuzzAPIDemo
                     else
                     {
                         fizzBuzzResponse.InputData = Convert.ToString(i);
-                        fizzBuzzResponse.OutPutData = "Divided 1 by 3";
-                        fizzBuzzResponses.Add(fizzBuzzResponse);
-                        fizzBuzzResponse = new FizzBuzzResponse();
-                        fizzBuzzResponse.InputData = Convert.ToString(i);
-                        fizzBuzzResponse.OutPutData = "Divided 1 by 5";
+                        fizzBuzzResponse.OutPutData = "Divided " + i + " by 3 " + "\r\n" + " Divided " + i + " by 5";
                     }
                 }
                 else

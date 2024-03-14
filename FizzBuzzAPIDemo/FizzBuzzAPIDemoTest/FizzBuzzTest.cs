@@ -96,12 +96,42 @@ namespace FizzBuzzAPIDemoTest
             .Select(c => c.OutPutData).FirstOrDefault();
 
             Assert.NotNull(fizzBuzzResponses);
-            Assert.Equal(6, fizzBuzzResponses.Count());
+            Assert.Equal(5, fizzBuzzResponses.Count());
             Assert.Equal("Divided 1 by 3", OutPutData3);
             Assert.Equal("Divided 1 by 5", OutPutData5);
             Assert.Equal("Fizz", OutPutDataFizz);
             Assert.Equal("Buzz", OutPutDataBuzz);
             Assert.Equal("FizzBuzz", OutPutDataFizzBuzz);
+            Assert.Equal("Invalid Item", OutPutDataInvalid);
+        }
+
+        [Fact]
+        public void TestToVerifyStringInputResults()
+        {
+            string[] numarr = { "a", "3", "b", "15" };
+            var fizzBuzzResponses = _iFizzBuzzProcessor.ProcessData(numarr);
+
+            var OutPutDataInvalid = fizzBuzzResponses
+            .Where(c => c.OutPutData == "Invalid Item")
+            .Select(c => c.OutPutData).FirstOrDefault();
+
+            Assert.NotNull(fizzBuzzResponses);
+            Assert.Equal(4, fizzBuzzResponses.Count());
+            Assert.Equal("Invalid Item", OutPutDataInvalid);
+        }
+
+        [Fact]
+        public void TestToVerifySpecialStringInputResults()
+        {
+            string[] numarr = { "@", "3", "$", "15" };
+            var fizzBuzzResponses = _iFizzBuzzProcessor.ProcessData(numarr);
+
+            var OutPutDataInvalid = fizzBuzzResponses
+            .Where(c => c.OutPutData == "Invalid Item")
+            .Select(c => c.OutPutData).FirstOrDefault();
+
+            Assert.NotNull(fizzBuzzResponses);
+            Assert.Equal(4, fizzBuzzResponses.Count());
             Assert.Equal("Invalid Item", OutPutDataInvalid);
         }
     }
