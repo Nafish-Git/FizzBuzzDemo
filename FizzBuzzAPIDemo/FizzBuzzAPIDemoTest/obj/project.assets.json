@@ -5740,11 +5740,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\bnacorp01sf\\turtle\\BIONIC_Users\\A1602942\\Desktop\\13\\FizzBuzzAPIDemo\\FizzBuzzAPIDemoTest\\FizzBuzzAPIDemoTest.csproj",
+      "projectUniqueName": "C:\\Nafish\\POC\\FizzBuzzDemo\\FizzBuzzAPIDemo\\FizzBuzzAPIDemoTest\\FizzBuzzAPIDemoTest.csproj",
       "projectName": "FizzBuzzAPIDemoTest",
-      "projectPath": "\\\\bnacorp01sf\\turtle\\BIONIC_Users\\A1602942\\Desktop\\13\\FizzBuzzAPIDemo\\FizzBuzzAPIDemoTest\\FizzBuzzAPIDemoTest.csproj",
+      "projectPath": "C:\\Nafish\\POC\\FizzBuzzDemo\\FizzBuzzAPIDemo\\FizzBuzzAPIDemoTest\\FizzBuzzAPIDemoTest.csproj",
       "packagesPath": "C:\\Users\\A1602942\\.nuget\\packages\\",
-      "outputPath": "\\\\bnacorp01sf\\turtle\\BIONIC_Users\\A1602942\\Desktop\\13\\FizzBuzzAPIDemo\\FizzBuzzAPIDemoTest\\obj\\",
+      "outputPath": "C:\\Nafish\\POC\\FizzBuzzDemo\\FizzBuzzAPIDemo\\FizzBuzzAPIDemoTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5759,15 +5759,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "\\\\bnacorp01sf\\turtle\\BIONIC_Users\\A1602942\\Desktop\\13\\FizzBuzzAPIDemo\\FizzBuzzAPIDemo\\FizzBuzzAPIDemo.csproj": {
-              "projectPath": "\\\\bnacorp01sf\\turtle\\BIONIC_Users\\A1602942\\Desktop\\13\\FizzBuzzAPIDemo\\FizzBuzzAPIDemo\\FizzBuzzAPIDemo.csproj"
+            "C:\\Nafish\\POC\\FizzBuzzDemo\\FizzBuzzAPIDemo\\FizzBuzzAPIDemo\\FizzBuzzAPIDemo.csproj": {
+              "projectPath": "C:\\Nafish\\POC\\FizzBuzzDemo\\FizzBuzzAPIDemo\\FizzBuzzAPIDemo\\FizzBuzzAPIDemo.csproj"
             }
           }
         }
@@ -5819,7 +5818,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

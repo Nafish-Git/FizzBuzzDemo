@@ -75,12 +75,8 @@ namespace FizzBuzzAPIDemoTest
             string[] numarr = { "3", null, "5", "15", "1" };
             var fizzBuzzResponses = _iFizzBuzzProcessor.ProcessData(numarr);
 
-            var OutPutData3 = fizzBuzzResponses
-                    .Where(c => c.OutPutData == "Divided 1 by 3")
-                    .Select(c => c.OutPutData).FirstOrDefault();
-
             var OutPutData5 = fizzBuzzResponses
-            .Where(c => c.OutPutData == "Divided 1 by 5")
+            .Where(c => c.OutPutData == "Divided 1 by 3 \r\n Divided 1 by 5")
             .Select(c => c.OutPutData).FirstOrDefault();
             var OutPutDataFizz = fizzBuzzResponses
             .Where(c => c.OutPutData == "Fizz")
@@ -97,8 +93,7 @@ namespace FizzBuzzAPIDemoTest
 
             Assert.NotNull(fizzBuzzResponses);
             Assert.Equal(5, fizzBuzzResponses.Count());
-            Assert.Equal("Divided 1 by 3", OutPutData3);
-            Assert.Equal("Divided 1 by 5", OutPutData5);
+            Assert.Equal("Divided 1 by 3 \r\n Divided 1 by 5", OutPutData5);
             Assert.Equal("Fizz", OutPutDataFizz);
             Assert.Equal("Buzz", OutPutDataBuzz);
             Assert.Equal("FizzBuzz", OutPutDataFizzBuzz);
